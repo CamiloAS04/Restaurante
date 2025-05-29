@@ -10,7 +10,7 @@
   --color-primario: #ff0000;
   --color-secundario: #eb0c0c;
   --color-fondo: #201d1d;
-  --color-texto: #333;
+  --color-texto: #f50303;
   --color-footer: #222;
   --font-main: 'Poppins', sans-serif;
   --max-width: 1200px;
@@ -20,7 +20,7 @@
 body {
   font-family: var(--font-main);
   background-color: var(--color-fondo);
-  color: var(--color-texto);
+  color: wh;
   line-height: 1.6;
 }
 
@@ -32,7 +32,7 @@ img {
 }
 
 .menu-card img {
-  height: 180px; /* o el tamaño que prefieras */
+  height: 180px;
   object-fit: cover;
   width: 100%;
   border-radius: 8px;
@@ -48,32 +48,16 @@ ul {
   list-style: none;
 }
 
-/* === Header y Nav === */
+/* === Header === */
 .header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: var(--color-primario);
-  color: white;
   padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
+  background-color: var(--color-primario);
+  text-align: center;
 }
 
 .header__logo {
   font-weight: bold;
   font-size: 1.5rem;
-}
-
-.header_nav .nav_list {
-  display: flex;
-  gap: 1rem;
-}
-
-.header__nav a:hover {
-  text-decoration: underline;
 }
 
 /* === Hero === */
@@ -159,6 +143,32 @@ ul {
   font-size: 0.9rem;
 }
 
+/* === Menú inferior fijo === */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-primario);
+  z-index: 1000;
+}
+
+.bottom-nav__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.7rem 0;
+}
+
+.bottom-nav__list li a {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.bottom-nav__list li a:hover {
+  text-decoration: underline;
+}
+
 /* === Responsive === */
 @media (max-width: 600px) {
   .header_nav .nav_list {
@@ -174,3 +184,4 @@ ul {
     font-size: 1rem;
   }
 }
+
